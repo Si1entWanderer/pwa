@@ -1,0 +1,5 @@
+{
+    "customSyntax": "postcss-sass",
+    "rules": {
+    }
+}

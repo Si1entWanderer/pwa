@@ -1,0 +1,28 @@
+@mixin media-xs 
+    @media (max-width: #{$media-xs})
+        @content
+
+@mixin media-s 
+    @media (min-width: #{$media-xs + 1px}) and (max-width: #{$media-s})
+        @content
+
+@mixin media-sm 
+    @media (min-width: #{$media-s + 1px}) and (max-width: #{$media-sm})
+        @content
+
+@mixin media-m 
+    @media (min-width: #{$media-sm + 1px}) and (max-width: #{$media-m})
+        @content
+
+@mixin media-l 
+    @media (min-width: #{$media-m + 1px}) and (max-width: #{$media-l})
+        @content
+
+
+@mixin media-xl 
+    @media (min-width: #{$media-l + 1px}) and (max-width: #{$media-xl})
+        @content
+
+@mixin media-xxl 
+    @media (min-width: #{$media-l + 1px}) and (max-width: #{$media-xxl})
+        @content
