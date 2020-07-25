@@ -1,0 +1,23 @@
+mixin image(src, alt="")
+    - const ext = src.match(/\.[^\.]*$/)[0];
+    - let path = src.replace(ext, '');
+    - let ext2 = '';
+    
+    -
+        switch (ext){
+            case '.png':
+            case '.jpg':
+            case '.gif':
+                ext2 = '.webp';
+                break;
+            case '.webp':
+                ext2 = '.png';
+                break;
+            default:
+                ext2 = '.webp';
+                break;
+        }
+    picture
+        img(src=(path + ext2), alt=alt)
+        br
+        img(src=(path + ext), alt=alt)
