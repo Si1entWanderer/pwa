@@ -1,4 +1,5 @@
 const   gulp = require("gulp"),
+        prettyHtml = require('./pretty'),
         pug = require("gulp-pug");
 
 const path = {
@@ -8,8 +9,7 @@ const path = {
 
 module.exports = function html(){
     return  gulp.src(path.src)
-                .pipe(pug({
-                    pretty: false
-                }))
+                .pipe(pug())
+                .pipe(prettyHtml())
                 .pipe(gulp.dest(path.dest));   
 }
