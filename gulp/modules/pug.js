@@ -8,6 +8,8 @@ const path = {
 
 module.exports = function html(){
     return  gulp.src(path.src)
-                .pipe(pug())
+                .pipe(pug({
+                    pretty: false
+                }))
                 .pipe(gulp.dest(path.dest));   
 }
